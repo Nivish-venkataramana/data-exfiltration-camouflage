@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HACKER PANEL</title>
+
+    <style>
+        body {
+            background:black;
+            color:lime;
+            font-family:Courier;
+            text-align:center;
+        }
+
+        button {
+            margin:10px;
+            padding:10px 20px;
+            background:red;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        #console {
+            margin-top:20px;
+            height:300px;
+            overflow:auto;
+            border:1px solid lime;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>💀 HACKER CONTROL PANEL</h2>
+
+<div>
+    <button onclick="stealFile('employee_records.csv')">employee_records.csv</button>
+    <button onclick="stealFile('server_logs.log')">server_logs.log</button>
+    <button onclick="stealFile('backup_2024.zip')">backup_2024.zip</button>
+    <button onclick="stealFile('project_docs.pdf')">project_docs.pdf</button>
+    <button onclick="stealFile('sales_report.xlsx')">sales_report.xlsx</button>
+    <button onclick="stealFile('user_credentials.txt')">user_credentials.txt</button>
+    <button onclick="stealFile('system_config.json')">system_config.json</button>
+    <button onclick="stealFile('image_archive.zip')">image_archive.zip</button>
+    <button onclick="stealFile('video_backup.mp4')">video_backup.mp4</button>
+    <button onclick="stealFile('internal_notes.docx')">internal_notes.docx</button>
+    <button onclick="stealFile('network_traffic.pcap')">network_traffic.pcap</button>
+    <button onclick="stealFile('password_dump.txt')">password_dump.txt</button>
+    <button onclick="stealFile('app_logs.log')">app_logs.log</button>
+    <button onclick="stealFile('finance_data.csv')">finance_data.csv</button>
+    <button onclick="stealFile('hr_records.xlsx')">hr_records.xlsx</button>
+    <button onclick="stealFile('audit_trail.log')">audit_trail.log</button>
+    <button onclick="stealFile('encrypted_backup.enc')">encrypted_backup.enc</button>
+    <button onclick="stealFile('cloud_sync.zip')">cloud_sync.zip</button>
+    <button onclick="stealFile('api_keys.txt')">api_keys.txt</button>
+    <button onclick="stealFile('db_export.sql')">db_export.sql</button>
+    <button onclick="stealFile('email_archive.pst')">email_archive.pst</button>
+    <button onclick="stealFile('logs_2025.log')">logs_2025.log</button>
+    <button onclick="stealFile('system_image.iso')">system_image.iso</button>
+    <button onclick="stealFile('user_sessions.csv')">user_sessions.csv</button>
+    <button onclick="stealFile('payment_history.xlsx')">payment_history.xlsx</button>
+    <button onclick="stealFile('admin_notes.txt')">admin_notes.txt</button>
+    <button onclick="stealFile('security_report.pdf')">security_report.pdf</button>
+    <button onclick="stealFile('config_backup.json')">config_backup.json</button>
+    <button onclick="stealFile('logs_backup.tar')">logs_backup.tar</button>
+    <button onclick="stealFile('video_logs.mp4')">video_logs.mp4</button>
+    <button onclick="stealFile('system_dump.bin')">system_dump.bin</button>
+    <button onclick="stealFile('temp_storage.zip')">temp_storage.zip</button>
+    <button onclick="stealFile('users_list.csv')">users_list.csv</button>
+    <button onclick="stealFile('billing_data.xlsx')">billing_data.xlsx</button>
+    <button onclick="stealFile('error_logs.log')">error_logs.log</button>
+    <button onclick="stealFile('credentials_backup.txt')">credentials_backup.txt</button>
+    <button onclick="stealFile('source_code.zip')">source_code.zip</button>
+    <button onclick="stealFile('design_files.psd')">design_files.psd</button>
+    <button onclick="stealFile('archive_old.tar.gz')">archive_old.tar.gz</button>
+    <button onclick="stealFile('meeting_notes.docx')">meeting_notes.docx</button>
+    <button onclick="stealFile('client_list.csv')">client_list.csv</button>
+    <button onclick="stealFile('invoice_data.xlsx')">invoice_data.xlsx</button>
+    <button onclick="stealFile('event_logs.log')">event_logs.log</button>
+    <button onclick="stealFile('user_profiles.json')">user_profiles.json</button>
+    <button onclick="stealFile('backup_full.zip')">backup_full.zip</button>
+    <button onclick="stealFile('analytics_data.csv')">analytics_data.csv</button>
+    <button onclick="stealFile('system_state.bin')">system_state.bin</button>
+    <button onclick="stealFile('config_old.json')">config_old.json</button>
+    <button onclick="stealFile('cache_dump.tmp')">cache_dump.tmp</button>
+    <button onclick="stealFile('records_2023.csv')">records_2023.csv</button>
+    <button onclick="stealFile('records_2024.csv')">records_2024.csv</button>
+    <button onclick="stealFile('records_2025.csv')">records_2025.csv</button>
+    <button onclick="stealFile('final_backup.zip')">final_backup.zip</button>
+    <button onclick="stealFile('secure_keys.pem')">secure_keys.pem</button>
+    <button onclick="stealFile('token_store.json')">token_store.json</button>
+    <button onclick="stealFile('session_data.tmp')">session_data.tmp</button>
+    <button onclick="stealFile('report_final.pdf')">report_final.pdf</button>
+    <button onclick="stealFile('logs_final.log')">logs_final.log</button>
+    <button onclick="stealFile('client_data.xlsx')">client_data.xlsx</button>
+    <button onclick="stealFile('database_full.sql')">database_full.sql</button>
+</div>
+
+<div id="console"></div>
+
+<script>
+
+function stealFile(file){
+
+    fetch("http://127.0.0.1:5000/event", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({file:file})
+    });
+
+    let div = document.createElement("div");
+    div.innerText = "🚨 ATTACK SENT: " + file;
+
+    document.getElementById("console").appendChild(div);
+}
+
+</script>
+
+</body>
+</html>
