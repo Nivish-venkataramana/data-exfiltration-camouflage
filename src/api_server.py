@@ -2,15 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from datetime import datetime
 
-from src.pipeline import process_packet
-from src.detect import detect
+from pipeline import process_packet
+from detect import detect
 
 app = Flask(__name__)
 CORS(app)
 
 # Store logs
 logs = []
-
 # Track stolen files (state of vault)
 stolen_files = set()
 
